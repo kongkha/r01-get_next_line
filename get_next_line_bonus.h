@@ -34,6 +34,11 @@ struct	s_gnl_buf_list_info
 	ssize_t					bytes_eol;
 };
 
+/**
+ * get_next_line() - Get a line from file descriptor
+ * @fd: file descriptor to read
+ * Return: pointer to line string
+ */
 char					*get_next_line(int fd);
 ssize_t					min(ssize_t a, ssize_t b);
 void					*ft_memcpy(void *dest, const void *src, size_t n);

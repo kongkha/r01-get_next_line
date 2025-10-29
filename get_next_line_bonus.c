@@ -36,10 +36,10 @@ static ssize_t	newline_len(char *buf, size_t len)
 }
 
 /**
- * read_fd_append_list() - Append and set lst to newly created node
- * @lst: list
+ * read_fd_append_list() - Append read buffer to list
+ * @lst: pointer to list
  * @fd: file descriptor to read
- * Return: new list
+ * Return: new buffer node
  */
 static struct s_gnl_buf_list	*read_fd_append_list(
 	struct s_gnl_buf_list **lst, int fd)
@@ -63,7 +63,7 @@ static struct s_gnl_buf_list	*read_fd_append_list(
 /**
  * read_fd_until_newline() - Read file descriptor until newline is found, and
  *                           append into list
- * @lst_info: list info, head must not be NULL
+ * @lst_info: list info
  * @fd: file descriptor
  * Return: length until newline
  */
@@ -101,8 +101,6 @@ static size_t	read_fd_until_newline(struct s_gnl_buf_list_info *lst_info,
  * construct_string() - Construct a string from provided lst_info,
  *                      and delete completely traversed node
  * @lst_info: list info
- * @start: start of the list
- * @n: number of character to construct
  * Return: constructed string
  */
 static char	*construct_string(struct s_gnl_buf_list_info *lst_info)
@@ -134,11 +132,6 @@ static char	*construct_string(struct s_gnl_buf_list_info *lst_info)
 	return (buf);
 }
 
-/**
- * get_next_line() - Get a line from file descriptor
- * @fd: file descriptor to read
- * Return: pointer to line string
- */
 char	*get_next_line(int fd)
 {
 	static struct s_gnl_buf_list_info	*lst_info[MAX_FDS];
