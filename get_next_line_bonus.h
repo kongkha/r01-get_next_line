@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   get_next_line.h                                    :+:      :+:    :+:   */
+/*   get_next_line_bonus.h                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: pkongkha <pkongkha@student.42bangkok.com>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/22 20:44:29 by pkongkha          #+#    #+#             */
-/*   Updated: 2025/10/28 23:36:12 by pkongkha         ###   ########.fr       */
+/*   Updated: 2025/10/29 13:02:50 by pkongkha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,8 +16,8 @@
 # ifndef BUFFER_SIZE
 #  define BUFFER_SIZE 4096
 # endif
-# ifndef MAX_FDS
-#  define MAX_FDS 1024
+# ifndef MAX_FD
+#  define MAX_FD 1024
 # endif
 
 struct	s_gnl_buf_list

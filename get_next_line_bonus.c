@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   get_next_line.c                                    :+:      :+:    :+:   */
+/*   get_next_line_bonus.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: pkongkha <pkongkha@student.42bangkok.com>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/22 19:49:22 by pkongkha          #+#    #+#             */
-/*   Updated: 2025/10/28 23:50:49 by pkongkha         ###   ########.fr       */
+/*   Updated: 2025/10/29 13:02:39 by pkongkha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -134,7 +134,7 @@ static char	*construct_string(struct s_gnl_buf_list_info *lst_info)
 
 char	*get_next_line(int fd)
 {
-	static struct s_gnl_buf_list_info	*lst_info[MAX_FDS];
+	static struct s_gnl_buf_list_info	*lst_info[MAX_FD];
 
 	if (!lst_info[fd])
 	{
